@@ -1,7 +1,14 @@
+<%= render "navbar" %>
+
 <h1>Pins</h1>
 
+
 <% @pins.each do |pin| %>
-  <%= pin.url %><br />
-  <%= pin.comment %><br />
-  <img src="<%= pin.image %>"><br />
+  <img src="<%= pin.image %>" style="width: 50px">
+  <a href="<%= pin.url %>"><%= pin.url %></a>
+  <%= pin.comment %>
+  <a href="/pins/" + "<%= pin.id %>">show</a>
+  
+  
+  <br>
 <% end %>
