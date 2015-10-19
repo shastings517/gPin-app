@@ -7,7 +7,8 @@
 <p class="text-center"><%= @pin.comment %></p>
 
 <div class="text-center">
-  <a class="btn btn-default" href="/pins/<%= @pin.id %>/edit" class="text-center" role="button">Edit</a>
-  <div class="btn btn-default" role="button"><%= link_to 'Delete', @pin, method: :delete, data: {confirm: "Are you sure?"} %>
+  <%= link_to 'Edit this pin', edit_pin_path(@pin), class: 'btn btn-info' %> <!--LINK_TO PATH edit_pin_path(@pin) comes from route prefix-->
+  <!-- <a class="btn btn-default" href="/pins/<%= @pin.id %>/edit" class="text-center" role="button">Edit</a> -->
+  <div class="btn btn-default" role="button"><%= link_to 'Delete', @pin, method: :delete, data: {confirm: "Are you sure?"} %> <!--@pin == @pin_path rails automatically knows to follow @pin_path -->
   </div>
 </div>
