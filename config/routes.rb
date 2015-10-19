@@ -9,3 +9,5 @@ Rails.application.routes.draw do
   get '/pins/:id/edit', to: 'pins#edit'
   delete '/pins/:id', to: 'pins#destroy'
 end
+
+# http VERB 'route', to: 'controller#action'
