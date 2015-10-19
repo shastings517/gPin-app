@@ -10,4 +10,7 @@
   <%= f.label "Image" %>
   <%= f.text_field :image %><br />
   <%= f.submit "Edit Pin" %>
+
 <% end %>
+
+<%= link_to 'Destroy', @pin, method: :delete, data: {confirm: "Are you sure?"} %>
